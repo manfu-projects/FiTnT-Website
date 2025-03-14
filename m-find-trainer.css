@@ -76,7 +76,7 @@
     height: 40px;
     overflow: hidden;
     transition: background-color 1s, color 1s;
-    z-index: 1;
+    z-index: 0;
   }
   
   .action-button::before {
