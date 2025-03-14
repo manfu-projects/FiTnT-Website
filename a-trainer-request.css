@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'DMSans';
+    src: url(DMSans.ttf);
+}
+
+.page-title {
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: DMSans;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+
+.request-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.request-table, th, td {
+    border: 1px solid #ddd;
+    color: #fff;;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th, td {
+    font-family: DMSans;
+    padding: 10px;
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 15%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 22%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 22%;
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 22%;
+}
+
+th:nth-child(5), td:nth-child(5) {
+    width: 19%;
+}
+
+th {
+    background-color: #444444;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background-image: linear-gradient(to bottom right, #dd5c67, #10a3a3);
+    border: none;
+    color: #d3d3d3;
+    border-radius: 1000px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 220px;
+    height: 40px;
+    overflow: hidden;
+    transition: background-color 1s, color 1s;
+    z-index: 0;
+  }
+  
+  .action-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom left, #e63946, #008080);
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: -1;
+    border-radius: 1000px;
+  }
+  
+  .action-button:hover::before {
+    opacity: 1;
+  }
+  
+  .action-button:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    table {
+        width: 100%;
+        min-width: 800px;
+        margin: 0;
+    }
+}
